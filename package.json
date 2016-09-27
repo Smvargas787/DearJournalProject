@@ -17,6 +17,12 @@
   },
   "homepage": "https://github.com/Smvargas787/DearJournalProject#readme",
   "devDependencies": {
-    "express": "4.14.0"
+    "bower": "^1.7.9",
+    "express": "4.14.0",
+    "gulp": "^3.9.1",
+    "gulp-inject": "^4.1.0",
+    "gulp-ng-annotate": "^2.0.0",
+    "gulp-nodemon": "^2.2.0",
+    "morgan": "^1.7.0"
   }
 }

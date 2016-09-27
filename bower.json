@@ -1,0 +1,22 @@
+{
+  "name": "dearjournalapp",
+  "description": "An application that caters to users emotions.",
+  "main": "index.html",
+  "authors": [
+    "Selena Vargas"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Smvargas787/DearJournalProject",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularfire": "s2.0.2",
+    "angular-route": "s1.5.8"
+  }
+}
