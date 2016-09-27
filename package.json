@@ -1,0 +1,22 @@
+{
+  "name": "dearjournalapp",
+  "version": "1.0.0",
+  "description": "An application that caters to users emotions.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Smvargas787/DearJournalProject.git"
+  },
+  "author": "Selena Vargas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Smvargas787/DearJournalProject/issues"
+  },
+  "homepage": "https://github.com/Smvargas787/DearJournalProject#readme",
+  "devDependencies": {
+    "express": "4.14.0"
+  }
+}
