@@ -1,0 +1,80 @@
+/*Background*/
+
+body{
+  background-image: url("images/compbook.jpg");
+  background-position: cover;
+  font-size: 19px;
+}
+
+
+/*Font*/
+h1{
+  font-family: journal;
+  font-size: 36px;
+  text-align: center;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+  margin-top: 70px;
+}
+
+/*Section*/
+
+section{
+  background-image: url("images/DJLogo.png");
+  background-position: upper left;
+  background-repeat: no-repeat;
+  background-size: 180px;
+  background-color: #fff;
+  border: 5px solid #000;
+  text-align: center;
+}
+
+/*Forms*/
+
+label:first-of-type{
+  padding: 10px;
+}
+
+label{
+  display: inline-block;
+  clear: left;
+}
+
+form{
+  width: 250px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+input, select{
+  margin-top: 30px;
+}
+
+/*Avatars*/
+.avatarPicked {
+  background-color: red;
+}
+
+.AviThumb{
+  background-repeat: no-repeat;
+  border: 2px solid #000;
+  padding: 5px;
+}
+
+.imgContainer{
+    float:left;
+    width: 25%;
+    cursor: pointer;
+}
+
+/*Button*/
+
+button{
+  padding: 5px;
+  border: 3px solid #000;
+  background-color: #000;
+  color: #fff;
+  font-size: 18px;
+  margin-top: 60px;
+  cursor: pointer;
+}

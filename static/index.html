@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en" ng-app="DJournalApp">
 
-  <head>
-    <meta charset="utf-8">
-    <title>DearJournalApp</title>
+<head>
+	<base href="/" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DearJournalApp</title>
 
-    <!-- Bootstrap Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="css/styles.css?v=3.0" rel="stylesheet" type="text/css" media="all">
+	<script src="/bower/angular/angular.js"></script>
+	<script src="/bower/angular-route/angular-route.js"></script>
+	<script src="/bower/firebase/firebase.js"></script>
+	<script src="/bower/angularfire/dist/angularfire.js"></script>
 
-  </head>
-  <body>
-    <h1>Dear Journal</h1>
+	<!-- inject:js -->
+	<script src="/js/module.js"></script>
+	<script src="/js/routes.js"></script>
+	<script src="/js/controllers/HomeController.js"></script>
+	<!-- endinject -->
 
-  </body>
-  </html>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  	<link rel="stylesheet" href="bower/bootswatch-dist/css/bootstrap.css">
+  	<link href="css/styles.css?v=3.0" rel="stylesheet" type='text/css' media="all">
+
+</head>
+<body>
+    <!-- This is a BOSS HTML5 template! -->
+    <h1>DearJournal</h1>
+    <ng-view></ng-view>
+</body>
+</html>
