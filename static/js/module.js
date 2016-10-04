@@ -1,4 +1,4 @@
-angular.module('DJournalApp', ['ngRoute', 'firebase'])
+var DJournalApp = angular.module('DJournalApp', ['ngRoute', 'firebase'])
 .config(function() {
   // Intializing DJournalApp Firebase
 	var config = {

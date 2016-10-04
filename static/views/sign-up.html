@@ -1,57 +1,45 @@
-<section>
-  <h1>Create An Annonymous Username</h1>
+<section class="container">
+  <h1>Create An Anonymous Username</h1>
+  <div class="row">
+    <form ng-submit="EmailSignUp()" class="col-md-offset-4 col-md-4 sign-up-form">
 
-  <form ng-submit="registerSubmit()">
-      <label>
-        Choose an emoji for your profile
-      </label>
-
-      <div class="imgContainer">
-        <div ng-click="AvatarPick()">
-        <img ng-repeat="avatar in avatars" class="AviThumb" ng-class="monkeyKey" src="monkey.png" alt="MonkeyAvi" width="50px" height="50px">
-      </div>
+      <div class="form-group">
+        <div ng-repeat="avatar in avatars" class="image">
+          <img ng-src="/css/images/{{avatar.$value}}" height="60" width="60" alt="{avatar.$value}"
+            ng-click="pickAvatar(avatar)"/>
+        </div>
       </div>
 
-      <div class="imgContainer">
-        <img class="AviThumb" src="hearteyes.png" alt="HearteyesAvi" width="50px" height="50px">
+      <div class="form-group">
+        <label>Date of Birth:
+          <input type="date" name="bday" class="form-control" ng-model="form.Bday">
+        </label>
       </div>
 
-      <div class="imgContainer">
-        <img class="AviThumb" src="tears.png" alt="TearsAvi" width="50px" height="50px">
+      <div class="form-group">
+        <label>Email:
+          <input type="email" name="email" placeholder="123@gmail.com" class="form-control" ng-model="form.Email">
+       </label>
+     </div>
+
+       <div class="form-group">
+        <label>Password:
+            <input type="password" placeholder="123Go" ng-model="form.Password" class="form-control" ng-model="form.Password">
+        </label>
       </div>
 
-      <div class="imgContainer">
-        <img class="AviThumb" src="happyface.png" alt="HappyAvi" width="50px" height="50px">
+      <div class="form-group">
+        <p> {{ randomNameShow }} </p>
+        <button type="button" name="button" class="btn btn-primary"
+          ng-click="pickRandomName()">
+          Pick Random Username
+        </button>
       </div>
 
-    <label>Name Origin:
-      <select name ="nameOrigin">
-        <option value="African American" ng-model= "nameSelect.AA">African American</option>
-        <option value="Asian Pacific" ng-model= "nameSelect.AP">Asian Pacific</option>
-        <option value="Caucasian" ng-model= "nameSelect.Caucasian">Caucasian</option>
-        <option value="Hispanic/Latino" ng-model= "nameSelect.HL" >Hispanic/Latino</option>
-        <option value="Other" ng-model= "nameSelect.Other" >Other</option>
-      </select>
-    </label>
+      <div class="form-group">
+        <button class="btn btn-default" type="submit">Go Anonymous</button>
+      </div>
 
-    <label>Age:
-      <select name ="age">
-        <option value="14-19" ng-model= "ageSelect.age14">14-19</option>
-        <option value="20-30" ng-model= "ageSelect.age20">20-30</option>
-        <option value="31-40" ng-model= "ageSelect.age31">31-40</option>
-        <option value="40" ng-model= "ageSelect.age40">40+</option>
-      </select>
-   </label>
-
-    <label>Gender:
-      <input type="radio" name="gender" value="male" ng-model="genderRadio.Male" checked>Male</input>
-       <input type="radio" name="gender" value="female" ng-model="genderRadio.Female">Female</input>
-     </label>
-
-    <label>Password:
-        <input type="password" placeholder="Keep It A Secret" ng-model="input.Password">
-    </label>
-
-    <button ng-click="GenerateAnnonymous()" class = "generate-btn">Generate Name</button>
-  </form>
+    </form>
+  </div>
 </section>

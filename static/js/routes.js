@@ -1,4 +1,4 @@
-angular.module('DJournalApp')
+DJournalApp = angular.module('DJournalApp')
 .config(["$locationProvider", "$routeProvider", function($locationProvider, $routeProvider) {
 	$locationProvider.html5Mode(true);
 	$routeProvider
@@ -8,7 +8,11 @@ angular.module('DJournalApp')
 	})
 	.when('/sign-up', {
 		templateUrl: '/views/sign-up.html',
-		controller: 'HomeController'
+		controller: 'SignUpController'
+	})
+	.when('/feed', {
+		templateUrl: '/views/feed.html',
+		controller: 'SignUpController'
 	})
 	.otherwise({
 		redirectTo: '/'
