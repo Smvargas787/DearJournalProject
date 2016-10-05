@@ -12,7 +12,11 @@ DJournalApp = angular.module('DJournalApp')
 	})
 	.when('/feed', {
 		templateUrl: '/views/feed.html',
-		controller: 'SignUpController'
+		controller: 'FeedController'
+	})
+	.when('/login', {
+		templateUrl: '/views/login.html',
+		controller: 'LoginController'
 	})
 	.otherwise({
 		redirectTo: '/'
