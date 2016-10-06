@@ -1,0 +1,20 @@
+<h1>Chat Room</h1>
+
+<div>
+
+  <div class="well">
+    <ul>
+      <li ng-repeat='message in messages'>
+        <strong>{{message.user}}:</strong> {{message.text}}
+      </li>
+    </ul>
+  </div>
+
+
+  <label>
+    <input type="text" ng-model="newmessage.text" placeholder="type message">
+  </label>
+
+  <button ng-click="insert()">Reply</button>
+
+</div>
