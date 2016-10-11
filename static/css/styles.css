@@ -6,7 +6,6 @@ body{
   font-size: 19px;
 }
 
-
 /*Font*/
 h1{
   font-family: journal;
@@ -91,5 +90,9 @@ img{
   color: #fff;
   font-size: 18px;
   margin-top: 60px;
+  cursor: pointer;
+}
+
+span{
   cursor: pointer;
 }

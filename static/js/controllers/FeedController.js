@@ -17,7 +17,7 @@ DJournalApp.controller("FeedController", ["$scope", "$firebaseAuth", "$firebaseO
     console.log('Picked Mood ',   $scope.newJournalEntry.mood);
   };
 
-  //----------------------------------- Journal Entry ------------------------------//
+  //----------------------------------- Journal Entry Submit ------------------------------//
   $scope.authObj.$onAuthStateChanged(function(firebaseUser) {
     if (firebaseUser) {
       var userJournalRef = ref.child('journals/' + firebaseUser.uid);
@@ -38,17 +38,20 @@ DJournalApp.controller("FeedController", ["$scope", "$firebaseAuth", "$firebaseO
     });
 	};
 
+  //----------------------------------- Journal Entry Remove ------------------------------//
   $scope.removeJournalEntry = function(journal) {
   		journalsEntries.$remove(journal).then(function(ref) {
   			console.log('Removed item key ',  ref.key);
   	});
 	};
 
+  //----------------------------------- Journal Entry Edit ------------------------------//
   $scope.editJournalEntry = function(journal) {
     $scope.newJournalEntry = angular.copy(journal);
     $scope.editing = !$scope.editing;
   };
 
+  //----------------------------------- Journal Entry Update ------------------------------//
   $scope.updateJournalEntry = function() {
     var index = journalsEntries.$indexFor($scope.newJournalEntry.$id);
     console.log('Before we update: ', $scope.newJournalEntry);
