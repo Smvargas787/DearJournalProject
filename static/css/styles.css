@@ -19,7 +19,6 @@ h1{
 
 /*Section*/
 section{
-  background-image: url("images/DJLogo.png");
   background-position: upper left;
   background-repeat: no-repeat;
   background-size: 240px;
@@ -28,6 +27,14 @@ section{
   max-width: 1003px;
   position: relative;
   bottom: 65px;
+}
+
+.DJlogo{
+  background-position:left;
+  width: 240px;
+  border: none;
+  cursor: pointer;
+  margin-top: 5px;
 }
 
 /*Forms*/

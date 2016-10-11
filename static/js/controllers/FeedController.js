@@ -1,11 +1,23 @@
-DJournalApp.controller("FeedController", ["$scope", "$firebaseAuth", "$firebaseArray", function ($scope, $firebaseAuth, $firebaseArray) {
+DJournalApp.controller("FeedController", ["$scope", "$firebaseAuth", "$firebaseObject", "$firebaseArray", function ($scope, $firebaseAuth, $firebaseObject, $firebaseArray) {
   //Reference to DJournalApp Firebase
 	var ref = firebase.database().ref();
+  var moodRef = ref.child('moods');
+  var moods = $firebaseArray(moodRef);
   // Empty Object to store
   var journalsEntries = {};
 
+  $scope.moods = moods;
+  $scope.newJournalEntry = {};
+
   $scope.authObj = $firebaseAuth();
 
+  //----------------------------------- Mood ------------------------------//
+  $scope.pickMood = function(mood) {
+    $scope.newJournalEntry.mood = mood.$value;
+    console.log('Picked Mood ',   $scope.newJournalEntry.mood);
+  };
+
+  //----------------------------------- Journal Entry ------------------------------//
   $scope.authObj.$onAuthStateChanged(function(firebaseUser) {
     if (firebaseUser) {
       var userJournalRef = ref.child('journals/' + firebaseUser.uid);
@@ -27,18 +39,19 @@ DJournalApp.controller("FeedController", ["$scope", "$firebaseAuth", "$firebaseA
 	};
 
   $scope.removeJournalEntry = function(journal) {
-  		journalsEntries.$remove(post).then(function(ref) {
+  		journalsEntries.$remove(journal).then(function(ref) {
   			console.log('Removed item key ',  ref.key);
   	});
 	};
 
   $scope.editJournalEntry = function(journal) {
-    $scope.newPost = angular.copy(post);
+    $scope.newJournalEntry = angular.copy(journal);
     $scope.editing = !$scope.editing;
   };
 
   $scope.updateJournalEntry = function() {
-    var index = journalsEntries.$indexFor($scope.newPost.$id);
+    var index = journalsEntries.$indexFor($scope.newJournalEntry.$id);
+    console.log('Before we update: ', $scope.newJournalEntry);
     journalsEntries[index] = $scope.newJournalEntry;
     journalsEntries.$save(index).then(function(ref) {
       console.log("Updated item!");

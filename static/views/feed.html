@@ -3,25 +3,44 @@
 
     <form ng-submit="submitJournalEntry()">
       <div class="form-group">
-        <label for="journalTitle">Email address</label>
+        <label for="journalTitle">Title:</label>
         <input type="text" class="form-control" id="journalTitle" placeholder="Journal Title" ng-model="newJournalEntry.title">
       </div>
       <div class="form-group">
-        <label for="journalEntryText">Password</label>
-        <textarea class="form-control" id="journalEntryText" rows="3" ng-model="newJournalEntry.text"></textarea>
+        <label for="journalEntryText">Entry:</label>
+        <textarea class="form-control" id="journalEntryText" rows="3" ng-model="newJournalEntry.text"  placeholder="Type your Journal Entry"></textarea>
       </div>
-      <button type="submit" class="btn btn-default">Submit Journal Entry</button>
+
+      <div class="form-group">
+        <label for="moodFeels">How Are You Feeling?</label>
+        <div ng-repeat="mood in moods" class="image">
+          <img ng-src="/css/images/{{mood.$value}}" id="moodFeels" height="60" width="60" alt="{{mood.$value}}"
+            ng-click="pickMood(mood)"/>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-default" ng-hide="editing">Submit Journal Entry</button>
+      <a href="#" ng-click="updateJournalEntry()" class="btn btn-primary" ng-show="editing">Update Entry</a>
     </form>
 
   </div>
   <div class="col-md-9">
-    <div class="" ng-repeat="journal in journalsEntries">
+    <div class="" ng-repeat="journal in journalsEntries | orderBy: 'date':true ">
       <h2>{{journal.title}}</h2>
       <h4>{{journal.date | date : shortDate}}</h4>
       <p>
+        <img ng-show="journal.mood" ng-src="/css/images/{{journal.mood}}" id="moodFeels" height="80" width="80" alt="{{journal.mood}}"/>
+      </p>
+      <p>
         {{journal.text}}
       </p>
+      <span class="badge remove-post" ng-click="removeJournalEntry(journal)">
+      <span class="glyphicon glyphicon-remove"></span>
+      </span>
+      <span class="badge edit-post" ng-click="editJournalEntry(journal)">
+        <span class="glyphicon glyphicon-pencil"></span>
+      </span>
+
     </div>
   </div>
-
 </div>

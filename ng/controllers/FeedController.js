@@ -1,11 +1,23 @@
-DJournalApp.controller("FeedController", function ($scope, $firebaseAuth, $firebaseArray) {
+DJournalApp.controller("FeedController", function ($scope, $firebaseAuth, $firebaseObject, $firebaseArray) {
   //Reference to DJournalApp Firebase
 	var ref = firebase.database().ref();
+  var moodRef = ref.child('moods');
+  var moods = $firebaseArray(moodRef);
   // Empty Object to store
   var journalsEntries = {};
 
+  $scope.moods = moods;
+  $scope.newJournalEntry = {};
+
   $scope.authObj = $firebaseAuth();
 
+  //----------------------------------- Mood ------------------------------//
+  $scope.pickMood = function(mood) {
+    $scope.newJournalEntry.mood = mood.$value;
+    console.log('Picked Mood ',   $scope.newJournalEntry.mood);
+  };
+
+  //----------------------------------- Journal Entry Submit ------------------------------//
   $scope.authObj.$onAuthStateChanged(function(firebaseUser) {
     if (firebaseUser) {
       var userJournalRef = ref.child('journals/' + firebaseUser.uid);
@@ -26,19 +38,23 @@ DJournalApp.controller("FeedController", function ($scope, $firebaseAuth, $fireb
     });
 	};
 
+  //----------------------------------- Journal Entry Remove ------------------------------//
   $scope.removeJournalEntry = function(journal) {
-  		journalsEntries.$remove(post).then(function(ref) {
+  		journalsEntries.$remove(journal).then(function(ref) {
   			console.log('Removed item key ',  ref.key);
   	});
 	};
 
+  //----------------------------------- Journal Entry Edit ------------------------------//
   $scope.editJournalEntry = function(journal) {
-    $scope.newPost = angular.copy(post);
+    $scope.newJournalEntry = angular.copy(journal);
     $scope.editing = !$scope.editing;
   };
 
+  //----------------------------------- Journal Entry Update ------------------------------//
   $scope.updateJournalEntry = function() {
-    var index = journalsEntries.$indexFor($scope.newPost.$id);
+    var index = journalsEntries.$indexFor($scope.newJournalEntry.$id);
+    console.log('Before we update: ', $scope.newJournalEntry);
     journalsEntries[index] = $scope.newJournalEntry;
     journalsEntries.$save(index).then(function(ref) {
       console.log("Updated item!");
