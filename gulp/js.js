@@ -16,5 +16,6 @@ gulp.task('js:build', function () {
 });
 
 gulp.task('js:watch', ['js:build'], function(){
-  gulp.watch('/.ng/**/*.js', ['js:build']);
+  gulp.watch('./ng/**/*.js', ['js:build']);
+	console.log("Change");
 });

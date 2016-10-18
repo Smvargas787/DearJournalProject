@@ -22,6 +22,10 @@ DJournalApp = angular.module('DJournalApp')
 		templateUrl: '/views/chat.html',
 		controller: 'ChatController'
 	})
+	.when('/live-view', {
+		templateUrl: '/views/live-view.html',
+		controller: 'LiveViewController'
+	})
 	.otherwise({
 		redirectTo: '/'
 	});
