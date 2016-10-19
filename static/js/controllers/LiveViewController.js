@@ -17,6 +17,7 @@ DJournalApp.controller("LiveViewController", ["$scope", "$firebaseAuth", "$fireb
   });
 
 
+
   //----------------------------------- Display All Recent Journals ------------------------------//
 
   var log = [];

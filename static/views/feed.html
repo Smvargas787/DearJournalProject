@@ -27,7 +27,7 @@
 
   </div>
   <div class="col-md-9">
-    <div class="" ng-repeat="journal in journalsEntries | orderBy: 'date':true ">
+    <div ng-show="journalsEntries.length" class="" ng-repeat="journal in journalsEntries | orderBy: 'date':true ">
       <h2>{{journal.title}}</h2>
       <h4>{{journal.date | date : shortDate}}</h4>
       <p>
@@ -43,6 +43,10 @@
         <span class="glyphicon glyphicon-pencil"></span>
       </span>
 
+    </div>
+    <div ng-hide="journalsEntries.length" >
+      <p>Whoops! Looks Like You Don't Have Any Journal
+      </p>Entries! Go Ahead And Create Some!
     </div>
   </div>
 </div>

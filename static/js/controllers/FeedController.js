@@ -6,6 +6,11 @@ DJournalApp.controller("FeedController", ["$scope", "$firebaseAuth", "$firebaseO
   // Empty Object to store
   var journalsEntries = {};
 
+
+
+
+
+
   $scope.moods = moods;
   $scope.newJournalEntry = {};
 
