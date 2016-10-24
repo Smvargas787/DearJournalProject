@@ -1,8 +1,6 @@
 /*Background*/
 
 body{
-  /*background-image: url("images/compbook.jpg");*/
-  background-position: cover;
   font-size: 19px;
 }
 
@@ -15,6 +13,24 @@ h1{
   margin-bottom: 20px;
   margin-top: 70px;
 }
+
+h4{
+font-size: 40px;
+position: relative;;
+width: 660px;
+top: 260px;
+margin-left: 10px;
+
+}
+
+p{
+  position: absolute;
+  top: 385px;
+  font-family: Journal 74;
+  font-size: 24px;
+  margin-left: 15px;
+}
+
 
 /*Section*/
 section{
@@ -33,11 +49,25 @@ section{
   width: 240px;
   border: none;
   cursor: pointer;
-  margin-top: 5px;
+  margin-top: 15px;
+  margin-left: 15px;
 }
+
+.HomeLogo{
+  width: 390px;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-left: 15px;
+  position: absolute;
+  top: 95px;
+}
+
 
 .DJcta{
   float: right;
+  position: relative;
+  right: 55px;
 }
 
 /*Forms*/
@@ -124,4 +154,35 @@ span{
 
 .navbar-default{
   background-color: #191919;
+}
+
+.well-sm {
+    padding: 9px;
+    border-radius: 3px;
+    position: relative;
+    top: 510px;
+    margin-left: 15px;
+    width: 360px;
+    background-color: #2a2a2a;
+
+}
+
+a{
+  color: #1493a4;
+  cursor: pointer;
+}
+
+a:hover{
+  color: #e9b929;
+}
+
+.btn-group{
+left: 15px;
+padding: 5px;
+border: 3px solid;
+border-radius: 3px;
+background-color: #2a2a2a;
+margin-top: 490px;
+margin-right: 10px;
+cursor: pointer;
 }
