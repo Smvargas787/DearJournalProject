@@ -1,7 +1,7 @@
 /*Background*/
 
 body{
-  background-image: url("images/compbook.jpg");
+  /*background-image: url("images/compbook.jpg");*/
   background-position: cover;
   font-size: 19px;
 }
@@ -34,6 +34,10 @@ section{
   border: none;
   cursor: pointer;
   margin-top: 5px;
+}
+
+.DJcta{
+  float: right;
 }
 
 /*Forms*/
@@ -81,15 +85,6 @@ img{
   border: solid #000 2px;
 }
 
-/*Search Bar*/
-
-.searchBar {
-  padding:8px 15px;
-  background:rgba(50, 50, 50, 0.2);
-  border:0px solid #dbdbdb;
-  width: 300px;
-  height: 150px
-}
 /*Button*/
 
 .btn-default, .btn-primary{
@@ -107,15 +102,26 @@ span{
 }
 
 
-.searchButton {
-                position:relative;
-                padding:1px;
-                left:-8px;
-                border:2px solid #207cca;
-                background-color:#207cca;
-                color:#fafafa;
+/*CTA*/
+
+/*Nav Links*/
+.nav>li>a {
+  color: #1493a4;
 }
-.searchButton:hover  {
-                background-color:#fafafa;
-                color:#207cca;
+
+/*Nav Tabs*/
+.nav-tabs>li>a{
+  background-color: #2a2a2a;
+}
+
+.nav-tabs>li>a:hover{
+  background-color: #e9b929;
+}
+
+.nav-tabs>li>a:active{
+  background-color: #fff;
+}
+
+.navbar-default{
+  background-color: #191919;
 }

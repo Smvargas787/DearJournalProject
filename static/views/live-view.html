@@ -1,3 +1,16 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="logo">
+        <a href="/home"><img class="DJlogo" src="css/images/DJLogo.png"></a>
+    </div>
+  <div class="container">
+    <ul class="nav nav-tabs">
+     <li role="presentation" class="active"><a href="/live-view">Home Feed</a></li>
+     <li role="presentation"><a href="/feed">Profile</a></li>
+     <li role="presentation"><a href="/chat">Chat</a></li>
+    </ul>
+  </div>
+</nav>
+
 <div class="row well">
   <h1> <img class="" ng-src="css/images/{{loggedUser.avatar}}" height="60" width="60"> {{ loggedUser.username }}'s Journal</h1>
   <h4>Where Your Feelings Are Kept Safe</h4>
@@ -5,11 +18,6 @@
   <a href="/home"><img class="DJlogo" src="css/images/DJLogo.png"></a>
   <a href="/chat"><img class="smileyChat" src="css/images/chatSymbol.png" height="60" width="60"></a>
   <a href="/"><img class="gearShift" src="css/images/gearShift.png" height="60" width="60"></a>
-
-  <form>
-      <input cass="searchBar "type="text" placeholder="Search..." required>
-      <input class="searchButton" type="button" value="Search">
-  </form>
 
   <section>
     <div class="" ng-repeat="journal in journals | orderBy: 'date':true ">
