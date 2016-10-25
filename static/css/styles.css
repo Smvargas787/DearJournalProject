@@ -12,21 +12,22 @@ h1{
   letter-spacing: 3px;
   margin-bottom: 20px;
   margin-top: 70px;
+  color: #e9b929;
 }
 
-h4{
+
+
+.HomepageHeader{
 font-size: 40px;
 position: relative;;
 width: 660px;
 top: 260px;
 margin-left: 10px;
-
 }
 
-p{
+p.HomeParagraphs{
   position: absolute;
   top: 385px;
-  font-family: Journal 74;
   font-size: 24px;
   margin-left: 15px;
 }
@@ -34,14 +35,12 @@ p{
 
 /*Section*/
 section{
-  background-position: upper left;
+  /*background-position: upper left;*/
   background-repeat: no-repeat;
   background-size: 240px;
-  background-color: #fff;
+  background-color: #2a2a2a;
   border: 5px solid #000;
-  max-width: 1003px;
-  position: relative;
-  bottom: 65px;
+  padding: 10px;
 }
 
 .DJlogo{
@@ -49,7 +48,7 @@ section{
   width: 240px;
   border: none;
   cursor: pointer;
-  margin-top: 15px;
+  /*margin-top: 95px;*/
   margin-left: 15px;
 }
 
@@ -115,7 +114,7 @@ img{
   border: solid #000 2px;
 }
 
-/*Button*/
+/*Buttons*/
 
 .btn-default, .btn-primary{
   padding: 5px;
@@ -125,6 +124,17 @@ img{
   font-size: 18px;
   margin-top: 60px;
   cursor: pointer;
+}
+
+.btn-group{
+left: 15px;
+padding: 5px;
+border: 3px solid;
+border-radius: 3px;
+background-color: #2a2a2a;
+margin-top: 490px;
+margin-right: 10px;
+cursor: pointer;
 }
 
 span{
@@ -176,13 +186,13 @@ a:hover{
   color: #e9b929;
 }
 
-.btn-group{
-left: 15px;
-padding: 5px;
-border: 3px solid;
-border-radius: 3px;
-background-color: #2a2a2a;
-margin-top: 490px;
-margin-right: 10px;
-cursor: pointer;
+a:active{
+  color: #fff;
 }
+
+
+
+/*img.DjBackground{
+  background-size: cover;
+  background-repeat: no-repeat;
+}*/
