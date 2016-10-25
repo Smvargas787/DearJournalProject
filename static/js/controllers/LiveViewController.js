@@ -12,6 +12,7 @@ DJournalApp.controller("LiveViewController", ["$scope", "$firebaseAuth", "$fireb
       $scope.loggedUser = user; // {{ user }}
       console.log('Logged in user: ', $scope.loggedUser);
     } else {
+      $location.path("/login");
       console.log("Signed out");
     }
   });

@@ -7,13 +7,32 @@
 
 {
   "rules": {
-    "users": {
       "$uid": {
         // grants write access to the owner of this user account whose uid must exactly match the key ($uid)
         ".write": "auth !== null && auth.uid === $uid",
         // grants read access to any user who is logged in anonymously
         ".read": "auth !== null && auth.provider === 'anonymous'"
+      },
+      "avatars": {
+         ".read": "true",
+   			 ".write": "true"
+      },
+
+     	"moods": {
+         ".read": "true",
+   			 ".write": "true"
+      },
+        "journals": {
+         ".read": "true",
+   			 ".write": "true"
+      },
+        "messages": {
+         ".read": "true",
+   			 ".write": "true"
+      },
+        "users": {
+         ".read": "true",
+   			 ".write": "true"
       }
     }
   }
-}

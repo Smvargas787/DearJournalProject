@@ -38,6 +38,25 @@
 
 </head>
 <body>
+
+	<nav class="navbar navbar-default navbar-fixed-top" ng-controller="LoginController">
+
+		<div class="container">
+			<ul class="nav nav-tabs">
+			 <li role="presentation" ><a href="/live-view">Home Feed</a></li>
+			 <li role="presentation"><a href="/feed">Profile</a></li>
+			 <li role="presentation"><a href="/chat">Chat</a></li>
+			 <li ng-show="firebaseUser">
+				 <a href="#" ng-click="authObj.$signOut()">Sign out</a>
+			 </li>
+			 <li ng-hide="firebaseUser">
+					  <a href="/login">Login</a>
+		   </li>
+
+			</ul>
+		</div>
+	</nav>
+
     <ng-view></ng-view>
 </body>
 </html>

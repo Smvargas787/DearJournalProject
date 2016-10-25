@@ -8,9 +8,6 @@ DJournalApp.controller("FeedController", function ($scope, $firebaseAuth, $fireb
 
 
 
-
-
-
   $scope.moods = moods;
   $scope.newJournalEntry = {};
 
