@@ -7,8 +7,10 @@ DJournalApp.controller("FeedController", function ($scope, $firebaseAuth, $fireb
   var journalsEntries = {};
 
 
-
+	// Reference to default moods
   $scope.moods = moods;
+
+	// Creates array to capture all new journal posts
   $scope.newJournalEntry = {};
 
   $scope.authObj = $firebaseAuth();
