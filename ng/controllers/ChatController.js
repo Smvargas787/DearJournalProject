@@ -3,9 +3,11 @@ DJournalApp.controller("ChatController", function ($scope, $firebaseArray, $fire
   var chatMessage = ref.child('messages');
   var messages = $firebaseArray(chatMessage);
 
+  // Creating Message Arrays to capture new messages
   $scope.authObj = $firebaseAuth();
   $scope.newmessage = {};
 
+  // Connecting message w/username to display
   $scope.authObj.$onAuthStateChanged(function(firebaseUser) {
     if (firebaseUser) {
       var userRef = ref.child('users/' + firebaseUser.uid + '/data');
@@ -13,7 +15,6 @@ DJournalApp.controller("ChatController", function ($scope, $firebaseArray, $fire
       displayUser.$loaded()
       .then(function(data) {
         $scope.newmessage.user = data.username;
-        //console.log(data === displayUser);
         console.log("My Data:: ", data);
         console.log("Display Name:: ", data.username);
         console.log("SCOPE:: ", $scope.newmessage.user);
@@ -28,6 +29,7 @@ DJournalApp.controller("ChatController", function ($scope, $firebaseArray, $fire
 
   $scope.messages = messages;
 
+  // Allowing user to post new message
   $scope.insert = function() {
     console.log('In Function!!', $scope.newmessage);
     messages.$add($scope.newmessage)
