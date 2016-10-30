@@ -4,6 +4,7 @@ DJournalApp.controller("LiveViewController", function ($scope, $firebaseAuth, $f
   //----------------------------------- Display Username & Avatar ------------------------------//
   $scope.authObj = $firebaseAuth();
 
+  // Displays logged in user's names on top of page with avatar
   $scope.authObj.$onAuthStateChanged(function(firebaseUser) {
     if (firebaseUser) {
       console.log("Signed in as:", firebaseUser.uid);
@@ -17,13 +18,12 @@ DJournalApp.controller("LiveViewController", function ($scope, $firebaseAuth, $f
     }
   });
 
-
-
   //----------------------------------- Display All Recent Journals ------------------------------//
 
   var log = [];
   var endTime = 1476579600;
 
+  // Takes a copy of each user's recent posts and loads them onto the live-feed
   var query = firebase.database().ref("journals/").orderByKey();
   query.once("value")
     .then(function(snapshot) {
@@ -49,8 +49,6 @@ DJournalApp.controller("LiveViewController", function ($scope, $firebaseAuth, $f
               value.user = $scope.user;
               value.key = key;
               this.push(value);
-              // var obj = { key : value };
-              // this.push(obj);
             } else {
               console.log('OLD:', value);
             }
