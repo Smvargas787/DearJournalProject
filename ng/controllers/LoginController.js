@@ -3,6 +3,7 @@ DJournalApp.controller("LoginController", function ($scope, $firebaseAuth, $fire
 
   $scope.authObj = $firebaseAuth();
 
+  // Authorizes user with their account to log in
   $scope.authObj.$onAuthStateChanged(function(firebaseUser) {
     if (firebaseUser) {
       console.log("Signed in as:!!", firebaseUser.uid);
@@ -12,6 +13,9 @@ DJournalApp.controller("LoginController", function ($scope, $firebaseAuth, $fire
       console.log("Signed out!!", $scope.firebaseUser);
     }
   });
+
+  // Once they click SignIn they will be checked for their email and Password
+  //to make sure it is the correct user
 
   $scope.SignIn = function () {
     $scope.authObj.$signInWithEmailAndPassword($scope.form.Email, $scope.form.Password)
