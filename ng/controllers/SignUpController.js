@@ -139,7 +139,6 @@ DJournalApp.controller("SignUpController", function ($scope, $firebaseAuth, $fir
   };
 
   // Random Name Generator
-
   $scope.pickRandomName = function() {
     // Makes random number to pick from array
     var pickNumber = Math.floor(Math.random() * ($scope.randomNames.length - 1 + 1)) + 1;

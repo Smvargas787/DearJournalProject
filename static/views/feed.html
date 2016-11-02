@@ -28,13 +28,13 @@
 
   </div>
   <div class="col-md-9">
-    <div ng-show="journalsEntries.length" class="" ng-repeat="journal in journalsEntries | orderBy: 'date':true ">
+    <div ng-show="journalsEntries.length" class="journalEntries" ng-repeat="journal in journalsEntries | orderBy: 'date':true ">
       <h2>{{journal.title}}</h2>
       <h4>{{journal.date | date : shortDate}}</h4>
       <p>
         <img ng-show="journal.mood" ng-src="/css/images/{{journal.mood}}" id="moodFeels" height="80" width="80" alt="{{journal.mood}}"/>
       </p>
-      <p>
+      <p class="FeedParagraphs">
         {{journal.text}}
       </p>
       <span class="badge remove-post" ng-click="removeJournalEntry(journal)">
@@ -46,8 +46,10 @@
 
     </div>
     <div ng-hide="journalsEntries.length" >
-      <p>Whoops! Looks Like You Don't Have Any Journal
-      </p>Entries! Go Ahead And Create Some!
+      <h3 class="HideFeedH2"> Whoops!
+        <br>
+         No Journal Entries! Sign In and post one!
+       </h3>
     </div>
   </div>
 </div>
