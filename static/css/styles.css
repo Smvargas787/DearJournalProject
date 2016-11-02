@@ -191,8 +191,12 @@ a{
 
 /*Chat Room*/
 
-li.ChatNames{
-  text-decoration: none;
+ul{
+  list-style-type: none;
+}
+
+.chatReply{
+  width: 300px;
 }
 
 .chatButton{

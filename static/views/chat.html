@@ -3,16 +3,15 @@
 <div>
 
   <div class="well">
-    <ul>
-      <li class="ChatNames" ng-repeat='message in messages'>
-        <strong>{{message.user}}:</strong> {{message.text}}
+    <ul class="ChatNames">
+      <li role="presentation" ng-repeat='message in messages'>
+        <strong>{{message.user}}: </strong> {{message.text}}
       </li>
     </ul>
   </div>
 
-
   <label>
-    <input type="text" ng-model="newmessage.text" placeholder="type message">
+    <input class="chatReply" type="text" ng-model="newmessage.text" placeholder="type message">
   </label>
 
   <button class="chatButton" ng-click="insert()">Reply</button>
