@@ -197,15 +197,17 @@ ul{
 
 .chatReply{
   width: 300px;
+  border-radius: 5px;
 }
 
 .chatButton{
-  padding: 5px;
+  padding: 3px;
   border: 3px solid #000;
   background-color: #2a2a2a;
   color: #2CC3C1;
   font-size: 18px;
   cursor: pointer;
+  border-radius: 5px;
 }
 .chatButton:hover{
   background-color: #e9b929;
@@ -213,6 +215,25 @@ ul{
 
 .chatButton:active{
   background-color: #D1D1D1;
+}
+
+.well-lg{
+  border: solid #2CC3C1 3px;
+  background-color: #2a2a2a;
+}
+
+.chatResponse{
+  color: #fff;
+}
+
+.chatMessages{
+  color: #e9b929;
+}
+
+.panel{
+  background-color: grey;
+  letter-spacing: 2px;
+  padding: 10px;
 }
 
 /*Profile Feed*/
@@ -226,7 +247,6 @@ text-align: center;
 margin-top: 55px;
 font-size: 36px;
 }
-
 
 
 p.FeedParagraphs{
