@@ -28,6 +28,9 @@ DJournalApp.controller("LiveViewController", function ($scope, $firebaseAuth, $f
 
   // Takes a copy of each user's recent posts and loads them onto the live-feed
   var query = firebase.database().ref("journals/").orderByKey();
+
+  // Variable name = value, due to firebase event logs, with the var being value it goes back to firebase
+  // connecting with their rules to be computed accurately amongst the number of snapshot journals
   query.once("value")
     .then(function(snapshot) {
       console.log("CONNECT", snapshot.val());

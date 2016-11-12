@@ -173,6 +173,10 @@ span{
   background-color: #191919;
 }
 
+.nav-tabs {
+     border-bottom: none;
+}
+
 .well-sm {
     padding: 9px;
     border-radius: 3px;
