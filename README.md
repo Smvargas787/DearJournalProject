@@ -91,20 +91,20 @@ Via command line:
   git merge master
   ```
 
-5. If you haven't installed firebase yet, do so by setting up deployment tools from firebase google console database
+5. If you haven't set up firebase hosting yet, do so by setting up deployment tools from the firebase google console database
 
   ```
   npm install -g firebase-tools
   ```
 
 
-6. Set up firebase.json from firebase google console database
+6. Set up firebase.json from the firebase google console database
 
   ```
   firebase init
   ```
 
-7. Deploy ready code to firebase database
+7. Deploy ready code to firebase console
 
   ```
   firebase deploy
