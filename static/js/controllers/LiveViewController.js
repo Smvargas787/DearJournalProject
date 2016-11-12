@@ -20,7 +20,10 @@ DJournalApp.controller("LiveViewController", ["$scope", "$firebaseAuth", "$fireb
 
   //----------------------------------- Display All Recent Journals ------------------------------//
 
+  // Stores all the recent journal entries
   var log = [];
+
+  // Takes the most recent timestamp and snaps it accordingly by recents to the live-feed
   var endTime = 1476579600;
 
   // Takes a copy of each user's recent posts and loads them onto the live-feed
