@@ -1,4 +1,4 @@
-#DearJournalProject
+#DearJournalApp
 
 ##Installation
 
