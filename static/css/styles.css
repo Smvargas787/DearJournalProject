@@ -272,3 +272,14 @@ span.edit-post{
   font-size: 12px;
   padding: 5px 8px 5px 8px;
 }
+
+/*Footer*/
+footer{
+  background-color: #000;
+  color: #fff;
+  position: fixed;
+  top: 515px;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
