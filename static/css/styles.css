@@ -2,6 +2,7 @@
 
 body{
   font-size: 19px;
+  background: linear-gradient(to right, #747278 , #4A494D);
 }
 
 /*Font*/
@@ -17,11 +18,12 @@ h1{
 
 
 .HomepageHeader{
-font-size: 40px;
-position: relative;;
-width: 660px;
-top: 260px;
-margin-left: 10px;
+  font-size: 40px;
+  position: relative;;
+  width: 660px;
+  top: 260px;
+  margin-left: 10px;
+  color: #D1D1D1;
 }
 
 p.HomeParagraphs{
@@ -29,8 +31,12 @@ p.HomeParagraphs{
   top: 385px;
   font-size: 24px;
   margin-left: 15px;
+  color: #D1D1D1;
 }
 
+strong{
+  color: #e9b929;
+}
 
 /*Section*/
 section{
@@ -51,20 +57,13 @@ section{
 }
 
 .HomeLogo{
-  width: 390px;
+  width: 480px;
   border: none;
   cursor: pointer;
-  margin-top: 15px;
-  margin-left: 15px;
+  margin-top: 3px;
+  margin-left: 10px;
   position: absolute;
   top: 95px;
-}
-
-
-.DJcta{
-  float: right;
-  position: relative;
-  right: 55px;
 }
 
 /*Forms*/
@@ -124,26 +123,25 @@ img{
 }
 
 .btn-default:hover , .btn-primary:hover{
-  background-color: #e9b929;
+  color: #e9b929;
 }
 
-.btn-default:active , .btn-primary:active{
-  background-color: #D1D1D1;
-}
 
 .btn-group{
-left: 15px;
-padding: 5px;
-border: 3px solid;
-border-radius: 3px;
-background-color: #2a2a2a;
-margin-top: 490px;
-margin-right: 10px;
-cursor: pointer;
+  left: 15px;
+  padding: 5px;
+  border: 3px solid #2a2a2a;
+  border-radius: 3px;
+  background-color: #2a2a2a;
+  margin-top: 490px;
+  margin-right: 10px;
+  cursor: pointer;
+  width: 30%;
+  text-align: center;
 }
 
 .btn-group:hover{
-  background-color: #e9b929;
+  background-color: #D1D1D1;
 }
 
 span{
@@ -161,13 +159,6 @@ span{
   background-color: #2a2a2a;
 }
 
-.nav-tabs>li>a:hover{
-  background-color: #e9b929;
-}
-
-.nav-tabs>li>a:active{
-  background-color: #D1D1D1;
-}
 
 .navbar-default{
   background-color: #191919;
@@ -193,6 +184,11 @@ a{
   cursor: pointer;
 }
 
+a:hover{
+  color: #e9b929;;
+  cursor: pointer;
+}
+
 /*Chat Room*/
 
 ul{
@@ -214,12 +210,9 @@ ul{
   border-radius: 5px;
 }
 .chatButton:hover{
-  background-color: #e9b929;
+  color: #e9b929;
 }
 
-.chatButton:active{
-  background-color: #D1D1D1;
-}
 
 .well-lg{
   border: solid #2CC3C1 3px;
@@ -274,12 +267,62 @@ span.edit-post{
 }
 
 /*Footer*/
-footer{
+.footer-home{
   background-color: #000;
-  color: #fff;
-  position: fixed;
-  top: 515px;
+  border-top: 1px solid #D1D1D1;
+  color: #D1D1D1;
+  position: absolute;
+  top: 740px;
   width: 100%;
+  height: 100px;
   text-align: center;
-  padding: 10px;
+  padding: 5px;
+}
+
+.footer-feed{
+  background-color: #000;
+  border-top: 1px solid #D1D1D1;
+  color: #D1D1D1;
+  position: absolute;
+  top: 2160px;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  padding: 5px;
+}
+
+.footer-profile{
+  background-color: #000;
+  border-top: 1px solid #D1D1D1;
+  color: #D1D1D1;
+  position: absolute;
+  top: 784px;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  padding: 5px;
+}
+
+.footer-chat{
+  background-color: #000;
+  border-top: 1px solid #D1D1D1;
+  color: #D1D1D1;
+  position: absolute;
+  top: 784px;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  padding: 5px;
+}
+
+.footer-signup{
+  background-color: #000;
+  border-top: 1px solid #D1D1D1;
+  color: #D1D1D1;
+  position: absolute;
+  top: 784px;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  padding: 5px;
 }
