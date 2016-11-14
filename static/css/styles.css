@@ -16,6 +16,18 @@ h1{
   color: #e9b929;
 }
 
+.LoginHeader{
+  font-family: journal;
+  font-size: 36px;
+  text-align: center;
+  letter-spacing: 3px;
+  margin-bottom: -15px;
+  margin-top: 70px;
+  color: #e9b929;
+  margin-right: 20px;
+
+}
+
 
 .HomepageHeader{
   font-size: 40px;
@@ -43,13 +55,12 @@ section{
   background-repeat: no-repeat;
   background-size: 240px;
   /*background-color: #2a2a2a;*/
-  border: 5px solid #000;
   padding: 10px;
 }
 
 .DJlogo{
   background-position:left;
-  width: 240px;
+  width: 340px;
   border: none;
   cursor: pointer;
   margin-top: 45px;
@@ -83,12 +94,11 @@ label:last-of-type{
 }
 
 form{
-    background-color: #fff;
     margin: 0 auto;
     padding: 30px;
 }
 .sign-up-form{
-  padding-left: 76px;
+  width: 30%;
 }
 
 input, select{
@@ -99,6 +109,11 @@ input, select{
 
 .form-group:nth-of-type(2){
   clear: left;
+}
+
+.form-group2{
+  margin-top: -31px;
+
 }
 
 .image {
@@ -120,6 +135,20 @@ img{
   font-size: 18px;
   margin-top: 60px;
   cursor: pointer;
+  width: 100%;
+
+}
+
+.btn{
+  padding: 5px;
+  border: 3px solid #000;
+  background-color: #2a2a2a;
+  color: #2CC3C1;
+  font-size: 18px;
+  margin-top: 60px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
 }
 
 .btn-default:hover , .btn-primary:hover{
@@ -138,6 +167,11 @@ img{
   cursor: pointer;
   width: 30%;
   text-align: center;
+}
+
+.btn:hover{
+  background-color: #D1D1D1;
+
 }
 
 .btn-group:hover{
