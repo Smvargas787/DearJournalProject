@@ -5,30 +5,28 @@
          <a href="/home"><img class="DJlogo" src="css/images/DJLogo.png"></a>
      </div>
 
-  <h1>Create An Anonymous Username</h1>
+  <h1 class="SignupHeader">Create An Anonymous Username</h1>
   <div class="row">
     <form ng-submit="EmailSignUp()" class="col-md-offset-4 col-md-4 sign-up-form">
 
-      <div class="form-group">
+      <div class="form-group3">
         <div ng-repeat="avatar in avatars" class="image">
           <img ng-src="/css/images/{{avatar.$value}}" height="60" width="60" alt="{avatar.$value}"
             ng-click="pickAvatar(avatar)"/>
         </div>
       </div>
 
-      <div class="form-group">
-        <label>Email:
-          <input type="email" name="email" placeholder="123@gmail.com" class="form-control" ng-model="form.Email">
+      <div class="form-group2">
+          <input type="email" name="email" placeholder="Email" class="form-control" ng-model="form.Email">
        </label>
      </div>
 
-       <div class="form-group">
-        <label>Password:
-            <input type="password" placeholder="123Go" class="form-control" ng-model="form.Password">
+       <div class="form-group2">
+            <input type="password" placeholder="Password" class="form-control" ng-model="form.Password">
         </label>
       </div>
 
-      <div class="form-group">
+      <div class="form-group4">
         <p> {{ randomNameShow }} </p>
         <button type="button" name="button" class="btn btn-primary"
           ng-click="pickRandomName()">
@@ -36,7 +34,7 @@
         </button>
       </div>
 
-      <div class="form-group">
+      <div class="form-group5">
         <button class="btn btn-default" type="submit">Sign Up</button>
       </div>
 

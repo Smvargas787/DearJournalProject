@@ -6,6 +6,12 @@ body{
 }
 
 /*Font*/
+
+p{
+  color: #fff;
+  text-align: center;
+}
+
 h1{
   font-family: journal;
   font-size: 36px;
@@ -14,6 +20,11 @@ h1{
   margin-bottom: 20px;
   margin-top: 70px;
   color: #e9b929;
+}
+
+.SignupHeader{
+  position: relative;
+  bottom: 40px;
 }
 
 .LoginHeader{
@@ -43,7 +54,12 @@ p.HomeParagraphs{
   top: 385px;
   font-size: 24px;
   margin-left: 15px;
-  color: #D1D1D1;
+  color: #fff;
+  text-align: left;
+}
+
+i{
+  color: #fff;
 }
 
 strong{
@@ -54,7 +70,6 @@ strong{
 section{
   background-repeat: no-repeat;
   background-size: 240px;
-  /*background-color: #2a2a2a;*/
   padding: 10px;
 }
 
@@ -78,6 +93,13 @@ section{
 }
 
 /*Forms*/
+
+
+
+.form-group3{
+  position: absolute;
+  top: -45px;
+}
 
 label:first-of-type{
   padding: 10px;
@@ -105,6 +127,8 @@ input, select{
   margin-top: 30px;
 }
 
+
+
 /*Avatars*/
 
 .form-group:nth-of-type(2){
@@ -113,12 +137,24 @@ input, select{
 
 .form-group2{
   margin-top: -31px;
+}
 
+.form-group4{
+  border: 3px solid #2a2a2a;
+  background-color: #2a2a2a;
+  position: relative;
+  top: 50px;
+}
+
+.form-group5{
+  position: relative;
+  top: 50px;
 }
 
 .image {
   float: left;
   cursor: pointer;
+  background-color: #D1D1D1;
 }
 
 img{
@@ -255,6 +291,7 @@ ul{
 
 .chatResponse{
   color: #fff;
+  text-align: justify;
 }
 
 .chatMessages{
