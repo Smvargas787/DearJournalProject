@@ -315,6 +315,8 @@ ul{
 
 .chatReply{
   width: 300px;
+  position: relative;
+  bottom: 20px;
   border-radius: 5px;
 }
 
@@ -325,6 +327,9 @@ ul{
   color: #2CC3C1;
   font-size: 18px;
   cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+  bottom: 20px;
   border-radius: 5px;
 }
 .chatButton:hover{
@@ -428,7 +433,7 @@ span.edit-post{
   border-top: 1px solid #D1D1D1;
   color: #D1D1D1;
   position: absolute;
-  top: 784px;
+  top: 1050px;
   width: 100%;
   height: 100px;
   text-align: center;
