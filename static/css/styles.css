@@ -79,7 +79,7 @@ section{
   border: none;
   cursor: pointer;
   margin-top: 45px;
-  margin-left: 15px;
+  margin-left: -36px;
 }
 
 .HomeLogo{
@@ -94,11 +94,22 @@ section{
 
 /*Forms*/
 
+.col-md-3{
+  background-color: #D1D1D1;
+}
 
 
 .form-group3{
   position: absolute;
   top: -45px;
+}
+
+
+.form-control1{
+  width: 190px;
+  border-radius: 2px;
+  position: relative;
+  top: -24px;
 }
 
 label:first-of-type{
@@ -130,6 +141,11 @@ input, select{
 
 
 /*Avatars*/
+
+#moodFeels{
+  position: relative;
+  left: -365px;
+}
 
 .form-group:nth-of-type(2){
   clear: left;
@@ -320,6 +336,7 @@ font-size: 36px;
 p.FeedParagraphs{
   color: #1493a4;
   font-weight: 400;
+  text-align: justify;
 }
 
 
