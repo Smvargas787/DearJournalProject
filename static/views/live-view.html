@@ -1,23 +1,23 @@
 
 <div class="row well">
-  <h1> <img class="" ng-src="css/images/{{loggedUser.avatar}}" height="60" width="60"> {{ loggedUser.username }}'s Journal</h1>
-  <h4>Where Your Feelings Are Kept Safe</h4>
-
+  <section class="FeedView">
   <a href="/home"><img class="DJlogo" src="css/images/DJLogo.png"></a>
-  <a href="/chat"><img class="smileyChat" src="css/images/chatSymbol.png" height="60" width="60"></a>
-  <a href="/"><img class="gearShift" src="css/images/gearShift.png" height="60" width="60"></a>
+  <h1 class="LiveViewDisplayName"> <img class="" ng-src="css/images/{{loggedUser.avatar}}" height="60" width="60"> {{ loggedUser.username }}'s Journal</h1>
+  <h5 class="liveviewHeader">"Where Your Feelings Are Kept Safe"</h4>
+
+</section>
 
   <section>
     <div class="" ng-repeat="journal in journals | orderBy: 'date':true ">
       <h2>{{journal.title}}</h2>
       <h4>{{journal.date | date : shortDate}}</h4>
       <p>
-        <img ng-show="journal.mood" ng-src="/css/images/{{journal.mood}}" id="moodFeels" height="80" width="80" alt="{{journal.mood}}"/>
+        <img ng-show="journal.mood" ng-src="/css/images/{{journal.mood}}" id="moodFeels3" height="80" width="80" alt="{{journal.mood}}"/>
       </p>
-      <p>
+      <p class="journalText">
         {{journal.text}}
       </p>
-      <p>
+      <p class="journalUser">
         {{journal.user}}
       </p>
     </div>
