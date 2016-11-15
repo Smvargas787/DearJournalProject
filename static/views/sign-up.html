@@ -17,20 +17,20 @@
       </div>
 
       <div class="form-group2">
-          <input type="email" name="email" placeholder="Email" class="form-control" ng-model="form.Email">
+          <input type="email" name="email" placeholder="Email" class="form-control" ng-model="form.Email" required="Valid Email">
        </label>
      </div>
 
        <div class="form-group2">
-            <input type="password" placeholder="Password" class="form-control" ng-model="form.Password">
+            <input type="password" placeholder="Password" class="form-control" ng-model="form.Password" required="Valid Password">
         </label>
       </div>
 
       <div class="form-group4">
         <p> {{ randomNameShow }} </p>
         <button type="button" name="button" class="btn btn-primary"
-          ng-click="pickRandomName()">
-          Pick Random Username
+          ng-click="pickRandomName()" required="Pick Username">
+          Generate Username
         </button>
       </div>
 

@@ -6,22 +6,22 @@
          <a href="/home"><img class="DJlogo" src="css/images/DJLOGO.png"></a>
      </div>
 
-  <h1 class="LoginHeader">Log Into Your Journal</h1>
+  <h1 class="LoginHeader">Sign Into Your Journal</h1>
   <div class="row">
     <form ng-submit="SignIn()" class="col-md-offset-4 col-md-4 sign-up-form">
 
       <div class="form-group2">
-          <input type="email" name="email" placeholder="Email" class="form-control" ng-model="form.Email">
+          <input type="email" name="email" placeholder="Email" class="form-control" ng-model="form.Email" required="Valid Email">
        </label>
      </div>
 
        <div class="form-group2">
-            <input type="password" placeholder="Password" class="form-control" ng-model="form.Password">
+            <input type="password" placeholder="Password" class="form-control" ng-model="form.Password" required="Valid Password">
         </label>
       </div>
 
       <div class="form-group">
-        <button class="btn btn-default2" type="submit">Login</button>
+        <button class="btn btn-default2" type="submit">Sign In</button>
       </div>
 
     </form>

@@ -2,7 +2,7 @@
 
 <div>
 
-  <div class="well well-lg">
+  <div class="chatContainer">
     <ul class="ChatNames">
       <li role="presentation" ng-repeat='message in messages'>
         <div class="panel">
@@ -16,10 +16,9 @@
     </ul>
   </div>
 
-  <label>
+  <label class="sendContainer">
     <input class="chatReply" type="text" ng-model="newmessage.text" placeholder="type message">
   </label>
-
   <button class="chatButton" type="submit" ng-click="insert()">Send</button>
 </div>
 
@@ -27,6 +26,6 @@
     &copy; 2016 Selena Vargas
   <p>
     Contact information: <a href="mailto:selena_vargas30@yahoo.com">
-    selena_vargas30@yahoo.com</a>.
+    selena_vargas30@yahoo.com</a>
   </p>
 </footer>
