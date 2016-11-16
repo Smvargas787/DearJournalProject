@@ -110,7 +110,7 @@ section{
 /*Forms*/
 
 .col-md-3{
-  background-color: #D1D1D1;
+  background-color: #575856;
 }
 
 
@@ -123,6 +123,17 @@ section{
 .form-control1{
   width: 190px;
   border-radius: 2px;
+  position: relative;
+  top: -24px;
+  color: #e9b929;
+}
+
+.form-group6{
+  position: relative;;
+  top: -25px;
+}
+
+#journalTitle{
   position: relative;
   top: -24px;
 }
@@ -139,6 +150,7 @@ label{
 label:last-of-type{
   display: inline-block;
   clear: left;
+  color: #e9b929;
 }
 
 form{
@@ -172,7 +184,13 @@ p.journalUser{
 
 #moodFeels{
   position: relative;
-  left: -365px;
+  left: -260px;
+}
+
+label.MoodHAYU{
+  position: relative;
+  top: 10px;
+  word-wrap: break-word;
 }
 
 #moodFeels3{
@@ -395,8 +413,19 @@ ul{
 }
 
 /*Profile Feed*/
+
+.col-md-9{
+  border: 3px groove grey;
+  background: #9AA5A5;
+  width: 650px;
+  position: relative;
+  left: 100px;
+  top: 40px;
+  padding: 10px;
+}
+
 h2{
-  margin-top: 65px;
+  margin-top: 35px;
   color: #e9b929;
 }
 
@@ -408,9 +437,12 @@ font-size: 36px;
 
 
 p.FeedParagraphs{
-  color: #1493a4;
+  color: #061718;
   font-weight: 400;
   text-align: justify;
+  font-family: helvetica;
+  border-bottom: 2px solid #D1D1D1;
+  padding: 5px;
 }
 
 
@@ -419,6 +451,7 @@ span.remove-post{
   padding: 5px 8px 5px 8px;
   color: #fff;
   background-color: #BA2632;
+  cursor: pointer;
 }
 
 span.edit-post{
@@ -426,6 +459,7 @@ span.edit-post{
   background-color: #0F5C3D;
   font-size: 12px;
   padding: 5px 8px 5px 8px;
+  cursor: pointer;
 }
 
 /*Footer*/

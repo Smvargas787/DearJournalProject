@@ -7,7 +7,7 @@
     <form ng-submit="submitJournalEntry()">
       <div class="form-group6">
         <label for="journalTitle">Title:</label>
-        <input type="text" class="form-control1" id="journalTitle" placeholder="Journal Title" ng-model="newJournalEntry.title">
+        <input type="text" class="form-control" id="journalTitle" placeholder="Journal Title" ng-model="newJournalEntry.title">
       </div>
       <div class="form-group6">
         <label for="journalEntryText">Entry:</label>
@@ -15,7 +15,7 @@
       </div>
 
       <div class="form-group6">
-        <label for="moodFeels">How Are You Feeling?</label>
+        <label for="moodFeels" class="MoodHAYU">How Are You Feeling?</label>
         <div ng-repeat="mood in moods" class="image">
           <img ng-src="/css/images/{{mood.$value}}" id="moodFeels1" height="60" width="60" alt="{{mood.$value}}"
             ng-click="pickMood(mood)"/>
