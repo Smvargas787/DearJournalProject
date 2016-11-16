@@ -8,11 +8,11 @@
 </section>
 
   <section>
-    <div class="" ng-repeat="journal in journals | orderBy: 'date':true ">
+    <div class="col-md-91" ng-repeat="journal in journals | orderBy: 'date':true ">
       <h2>{{journal.title}}</h2>
       <h4>{{journal.date | date : shortDate}}</h4>
       <p>
-        <img ng-show="journal.mood" ng-src="/css/images/{{journal.mood}}" id="moodFeels3" height="80" width="80" alt="{{journal.mood}}"/>
+        <img ng-show="journal.mood" ng-src="/css/images/{{journal.mood}}" id="moodFeels" height="80" width="80" alt="{{journal.mood}}"/>
       </p>
       <p class="journalText">
         {{journal.text}}

@@ -84,7 +84,6 @@ strong{
 /*Section*/
 section{
   background-repeat: no-repeat;
-  background-size: 240px;
   padding: 10px;
 }
 
@@ -166,7 +165,7 @@ input, select{
 }
 
 p.journalText{
-  color: #2CC3C1;
+  color: #061718;
   text-align: justify;
 }
 
@@ -177,7 +176,7 @@ p.journalUser{
 }
 
 .FeedView{
-  background-color: #747278
+  background-color: #475B5A;
 }
 
 /*Avatars*/
@@ -191,11 +190,6 @@ label.MoodHAYU{
   position: relative;
   top: 10px;
   word-wrap: break-word;
-}
-
-#moodFeels3{
-  position: relative;
-  left: -509px;
 }
 
 .form-group:nth-of-type(2){
@@ -422,6 +416,17 @@ ul{
   left: 100px;
   top: 40px;
   padding: 10px;
+}
+
+.col-md-91{
+  border: 3px groove grey;
+  background: #9AA5A5;
+  width: 650px;
+  position: relative;
+  left: 260px;
+  top: 40px;
+  padding: 10px;
+  border-bottom: 2px solid #fff;
 }
 
 h2{
